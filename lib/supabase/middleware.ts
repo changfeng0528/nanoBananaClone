@@ -14,6 +14,7 @@ export async function updateSession(request: NextRequest) {
       supabaseUrl === 'your_supabase_project_url' ||
       supabaseAnonKey === 'your_supabase_anon_key') {
     // If Supabase is not configured, just pass through without authentication
+    console.warn('Supabase not configured, skipping authentication middleware')
     return supabaseResponse
   }
 
