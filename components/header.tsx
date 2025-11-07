@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { AuthClient } from "./auth-client"
 
 export default function Header() {
   return (
@@ -34,12 +35,7 @@ export default function Header() {
 
         {/* CTA Buttons */}
         <div className="flex items-center gap-3">
-          <Button
-            variant="outline"
-            className="hidden sm:inline-flex border-primary text-primary hover:bg-primary/10 bg-transparent"
-          >
-            Sign In
-          </Button>
+          <AuthClient />
           <Link href="/editor">
             <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
               Launch Now
